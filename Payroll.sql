@@ -32,3 +32,21 @@ ALTER TABLE employee_payroll ADD Gender varchar(6);
 UPDATE employee_payroll set Gender = 'M' where  Name='Omkar' or Name = 'Bill' or Name='Charlie' or Name='Ramesh' or Name='Suresh'
 UPDATE employee_payroll set Gender = 'F' where  Name='Rita' or Name = 'Priya'
 
+/* UC7 use of Database functions with GroupBy */
+Alter Table employee_payroll
+Alter Column Salary float
+
+Select SUM(Salary) From employee_payroll Where Gender='M' Group by Gender
+Select SUM(Salary) From employee_payroll Where Gender='F' Group by Gender
+
+Select AVG(Salary) From employee_payroll Where Gender='M' Group by Gender
+Select AVG(Salary) From employee_payroll Where Gender='F' Group by Gender
+
+Select MIN(Salary) From employee_payroll Where Gender='M' Group by Gender
+Select MIN(Salary) From employee_payroll Where Gender='F' Group by Gender
+
+Select MAX(Salary) From employee_payroll Where Gender='M' Group by Gender
+Select MAX(Salary) From employee_payroll Where Gender='F' Group by Gender
+
+Select COUNT(Salary) From employee_payroll Where Gender='M' Group by Gender
+Select COUNT(Salary) From employee_payroll Where Gender='F' Group by Gender
