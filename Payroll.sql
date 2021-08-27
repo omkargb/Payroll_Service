@@ -4,7 +4,7 @@ create database Payroll_service
 use Payroll_service
 
 /* UC2 create a employee payroll table in the payroll service database*/
-create table Employee_payroll(
+create table employee_payroll(
 Id int identity(1,1) primary key,
 Name varchar(20),
 Salary varchar(10),
@@ -22,3 +22,7 @@ insert into employee_payroll(Name, Salary, StartDate) values ('Charlie','25000',
 
 /* UC4 retrieve all the employee payroll data */
 select * from employee_payroll
+
+/*UC5 retrieve salary data on a condition */
+SELECT Salary,Name FROM employee_payroll WHERE Name = 'Bill'
+Select Salary,Name from employee_payroll where StartDate between ('25/08/2021') and ('26/08/2021')
