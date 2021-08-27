@@ -19,3 +19,6 @@ insert into employee_payroll(Name, Salary, StartDate) values ('Rita','35000','26
 insert into employee_payroll(Name, Salary, StartDate) values ('Priya','25000','26/08/2021')
 insert into employee_payroll(Name, Salary, StartDate) values ('Bill','35000','26/08/2021')
 insert into employee_payroll(Name, Salary, StartDate) values ('Charlie','25000','27/08/2021')
+
+/* UC4 retrieve all the employee payroll data */
+select * from employee_payroll
