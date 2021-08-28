@@ -68,3 +68,26 @@ UPDATE employee_payroll set BasicPay=25000 where Name='Bill';
 UPDATE employee_payroll set BasicPay=15000 where Name='Charlie';
 
 select * from employee_payroll
+
+/* UC10 Insert all values to the table */
+ALTER TABLE employee_payroll DROP COLUMN Salary
+
+ Update employee_payroll set 
+ Phone=9999888877 ,Address='Mumbai', Department='FrontEnd', Deductions=2000, TaxablePay=1000, IncomeTax=2000, NetPay=25000 where name='Omkar'
+ Update employee_payroll set 
+ Phone=9988558899 ,Address='Delhi', Department='Accounts', Deductions=3000, TaxablePay=1000, IncomeTax=3000, NetPay=33000 where name='Ramesh'
+ Update employee_payroll set 
+ Phone=8877995544 ,Address='Pune', Department='Backend', Deductions=2000, TaxablePay=1000, IncomeTax=4000, NetPay=43000 where name='Suresh'
+ Update employee_payroll set 
+ Phone=7744112233 ,Address='Chennai', Department='Testing', Deductions=1500, TaxablePay=1000, IncomeTax=1000, NetPay=21500 where name='Rita'
+ Update employee_payroll set 
+ Phone=7775553330 ,Address='Kolkata', Department='FrontEnd', Deductions=1000, TaxablePay=500, IncomeTax=0, NetPay=13500 where name='Priya'
+ Update employee_payroll set 
+ Phone=9080706050 ,Address='Delhi', Department='Accounts', Deductions=1500, TaxablePay=500, IncomeTax=1000, NetPay=22000 where name='Bill'
+ Update employee_payroll set 
+ Phone=8090603020 ,Address='Chennai', Department='Backend', Deductions=1000, TaxablePay=500, IncomeTax=0, NetPay=13500 where name='Charlie'
+
+Insert into employee_payroll 
+(Name, Gender, Phone, Address, Department, StartDate, BasicPay, Deductions, TaxablePay, IncomeTax, NetPay) values ('Rita','F',8887779999,'India','Sales','28/08/2021',20000,2000,1000,0,17000)
+
+select * from employee_payroll where Name='Rita'
